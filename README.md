@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+☀️ SunCart – Summer Essentials Store
 
-## Getting Started
+SunCart is a modern summer-themed eCommerce platform where users can explore and purchase seasonal products such as sunglasses, summer outfits, skincare, and beach accessories. It is a fully responsive, secure Single Page Application (SPA) built with performance and user experience in mind.
 
-First, run the development server:
+🎯 Project Purpose
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The goal of this project is to provide a seamless shopping experience for summer enthusiasts. It demonstrates secure routing, user authentication via BetterAuth, and a dynamic product management system.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+✨ Key Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Fully Responsive: Optimized for mobile, tablet, and desktop views.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Secure Authentication: Protected routes for product details using BetterAuth.
 
-## Learn More
+Social Login: Quick access via Google Social Authentication.
 
-To learn more about Next.js, take a look at the following resources:
+Profile Management: Logged-in users can view and update their profile information (Name and Photo).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Dynamic Product Display: Popular products and categories rendered dynamically from JSON data.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Interactive UI: Enhanced user experience with animations using [Animate.css / Lottie / React-Spring].
 
-## Deploy on Vercel
+🛠️ Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Framework: Next.js (App Router)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Styling: Tailwind CSS, DaisyUI / HeroUI
+
+Authentication: BetterAuth
+
+Deployment: Vercel
