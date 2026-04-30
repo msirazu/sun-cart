@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 25,
+    "description": "Stylish UV protection sunglasses perfect for summer outings and beach days.",
+    "image": "https://i.ibb.co.com/yFjcPPgj/UV-Protection-Sunglasses.jpg",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Men's Cotton Summer T-Shirt",
+    "brand": "CoolWear",
+    "price": 12,
+    "rating": 4.5,
+    "stock": 40,
+    "description": "Lightweight breathable cotton t-shirt designed for hot weather comfort.",
+    "image": "https://i.ibb.co.com/y1bk1X4/Men-s-Cotton-Summer-T-Shirt.jpg",
+    "category": "Clothing"
+  },
+  {
+  "id": 3,
+  "name": "Men's Summer Shorts",
+  "brand": "ActiveWear",
+  "price": 16,
+  "rating": 4.4,
+  "stock": 30,
+  "description": "Comfortable and breathable summer shorts ideal for casual wear and outdoor activities.",
+  "image": "https://i.ibb.co.com/yFbg0Ff3/Mens-Summer-Shorts.jpg",
+  "category": "Clothing"
+},
+  {
+    "id": 4,
+    "name": "SPF 50 Sunscreen Lotion",
+    "brand": "SkinGuard",
+    "price": 10,
+    "rating": 4.6,
+    "stock": 60,
+    "description": "High protection sunscreen lotion to protect your skin from harmful UV rays.",
+    "image": "https://i.ibb.co.com/7tHxRmy8/SPF-50-Sunscreen-Lotion.avif",
+    "category": "Skincare"
+  },
+  {
+    "id": 5,
+    "name": "Beach Straw Hat",
+    "brand": "SunnyLife",
+    "price": 14,
+    "rating": 4.4,
+    "stock": 30,
+    "description": "Wide brim straw hat to keep you cool and protected under the sun.",
+    "image": "https://i.ibb.co.com/7dm3kBM3/Beach-Straw-Hat.webp",
+    "category": "Accessories"
+  },
+  {
+    "id": 6,
+    "name": "Portable Mini Fan",
+    "brand": "BreezeTech",
+    "price": 9,
+    "rating": 4.3,
+    "stock": 50,
+    "description": "Rechargeable mini fan perfect for staying cool on the go.",
+    "image": "https://i.ibb.co.com/yBfHs3tV/Portable-Mini-Fan.jpg",
+    "category": "Electronics"
+  },
+  {
+    "id": 7,
+    "name": "Beach Flip Flops",
+    "brand": "WalkEasy",
+    "price": 8,
+    "rating": 4.2,
+    "stock": 35,
+    "description": "Comfortable and durable flip flops ideal for beach and casual wear.",
+    "image": "https://i.ibb.co.com/Z1Y4yPfN/Beach-Flip-Flops.webp",
+    "category": "Footwear"
+  },
+  {
+    "id": 8,
+    "name": "Aloe Vera Gel",
+    "brand": "NatureGlow",
+    "price": 7,
+    "rating": 4.6,
+    "stock": 45,
+    "description": "Soothing aloe vera gel for cooling and hydrating sun-exposed skin.",
+    "image": "https://i.ibb.co.com/rGPVjzCS/Aloe-Vera-Gel.avif",
+    "category": "Skincare"
+  },
+  {
+    "id": 9,
+    "name": "Beach Travel Backpack",
+    "brand": "AdventurePack",
+    "price": 20,
+    "rating": 4.5,
+    "stock": 20,
+    "description": "Spacious and water-resistant backpack for carrying all your beach essentials.",
+    "image": "https://i.ibb.co.com/7xXVxy3H/Beach-Travel-Backpack.jpg",
+    "category": "Accessories"
+  }
+]
