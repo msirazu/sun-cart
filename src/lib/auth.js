@@ -8,7 +8,8 @@ const db = client.db('sun-cart-db');
 
 export const auth = betterAuth({
     emailAndPassword: { 
-    enabled: true, 
+    enabled: true,
+    autoSignIn: true
   }, 
   database: mongodbAdapter(db, {
     client
