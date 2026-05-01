@@ -2,15 +2,13 @@
 
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "react-toastify";
 
 const LoginForm = () => {
     const [errorMessage, setErrorMessage] = useState('');
-    const searchParams = useSearchParams();
-
-    const callbackURL = searchParams.get("callbackURL") || "/";
+    const router = useRouter();
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -23,12 +21,13 @@ const LoginForm = () => {
         const { data, error } = await authClient.signIn.email({
             email: userData.email,
             password: userData.password,
-            callbackURL: callbackURL,
+            callbackURL: '/',
         });
 
         if (data) {
             toast.success('Login Successful');
             e.target.reset();
+            router.push('/');
         }
 
         if (error) {
@@ -49,7 +48,7 @@ const LoginForm = () => {
 <label className="label">Password</label>
 <input type="password" className="input w-full" placeholder="Password" name="password" required/>
 {errorMessage && (<p className="text-red-500 text-sm mt-2 font-medium">⚠️ {errorMessage}</p>)}
-<div className="my-3">Don&apos;t have an Account, then <Link href={`/register?callbackURL=${encodeURIComponent(callbackURL)}`} className="link link-hover font-bold">Register</Link></div>
+<div className="my-3">Don&apos;t have an Account, then <Link href={'/register'} className="link link-hover font-bold">Register</Link></div>
 <button type="submit" className="btn btn-neutral">Login</button>
                             </fieldset>
                         </div>

@@ -2,22 +2,20 @@
 
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "react-toastify";
 
 const RegisterForm = () => {
     const [errorMessage, setErrorMessage] = useState('');
-    const searchParams = useSearchParams();
     const router = useRouter();
-
-    const callbackURL = searchParams.get('callbackURL') || '/';
 
     const handleRegister = async(e) => {
         e.preventDefault();
 
         const name = e.target.name.value;
         const email = e.target.email.value;
+        const image = e.target.image.value;
         const password = e.target.password.value;
 
         const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
@@ -27,19 +25,20 @@ const RegisterForm = () => {
             return;
         }
 
-        const userData = { name, email, password}
+        const userData = { name, email, image, password}
 
         const { data, error } = await authClient.signUp.email({
         name: userData.name,
         email: userData.email,
+        image: userData.image,
         password: userData.password,
-        callbackURL: callbackURL,
+        callbackURL: '/login',
         });
 
         if (data) {
             toast.success('Registration Success');
             e.target.reset();
-            router.push(callbackURL);
+            router.push('/login');
         }
 
         if (error) {
@@ -47,30 +46,42 @@ const RegisterForm = () => {
         }
     }
     
+    const handleGoogleLogin = () => {
+
+    }
+
     return (
         <div>
-            <form onSubmit={handleRegister}>
             <div className="hero min-h-screen">
     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
       <div className="card-body">
+            <form onSubmit={handleRegister}>
         <fieldset className="fieldset">
+          
           <label className="label">Name</label>
           <input type="text" className="input w-full" placeholder="Name" name="name" required/>
+          
           <label className="label">Email</label>
           <input type="email" className="input w-full" placeholder="Email" name="email" required/>
+
+          <label className="label">Photo URL</label>
+          <input type="url" className="input w-full" placeholder="Photo Link" name="image" required/>
+          
           <label className="label">Password</label>
           <input type="password" className="input w-full" placeholder="Password" name="password" required/>
 
 {errorMessage && (<div className="bg-red-50 p-2 rounded mt-2"><p className="text-red-600 text-xs font-medium italic"> ⚠️ {errorMessage}
 </p></div>)}
 
-          <div>Already have Account, then <Link href={`/login?callbackURL=${encodeURIComponent(callbackURL)}`} className="link link-hover font-bold">Login</Link></div>
-          <button type="submit" className="btn btn-neutral mt-4">Register</button>
+          <button type="submit" className="btn btn-neutral mt-3">Register</button>
         </fieldset>
+            </form>
+            <div className="divider">OR</div>
+            <button onClick={handleGoogleLogin} className="btn btn-outline w-full">Login with Google</button>
+            <div className="mt-3">Already have Account, then <Link href={'/login'} className="link link-hover font-bold">Login</Link></div>
     </div>
   </div>
 </div>
-            </form>
         </div>
     );
 };

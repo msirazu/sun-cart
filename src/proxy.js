@@ -12,12 +12,7 @@ if (session) {
     return NextResponse.next();
 }
 
-    const originUrl = request.nextUrl.pathname;
-    
-    const loginUrl = new URL('/login', request.url);
-    loginUrl.searchParams.set('callbackURL', originUrl);
-
-    return NextResponse.redirect(loginUrl);
+return NextResponse.redirect(new URL('/login', request.url))
 
 }
  
