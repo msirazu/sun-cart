@@ -38,7 +38,7 @@ const LoginForm = () => {
 
     return (
         <div>
-            <form onSubmit={handleLogin}>
+            <form onSubmit={handleLogin} className="animate__animated animate__fadeInUp">
                 <div className="hero min-h-screen">
                     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         <div className="card-body">

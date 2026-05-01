@@ -1,9 +1,14 @@
-import Link from "next/link";
+import MyProfilePageMain from "@/features/dashboard/MyProfilePageMain";
+
+export const metadata ={
+    title: 'My Profile | Sun Cart',
+    description: 'my profile page of sun cart web app'
+}
 
 const MyProfilePage = () => {
     return (
-        <div className="flex flex-col justify-center items-center h-screen">
-            <Link className="btn" href={'/dashboard/update-profile'}>Update Profile</Link>
+        <div>
+            <MyProfilePageMain/>
         </div>
     );
 };

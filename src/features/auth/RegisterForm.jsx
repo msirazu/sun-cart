@@ -47,12 +47,12 @@ const RegisterForm = () => {
     }
     
     const handleGoogleLogin = () => {
-
+        toast.error('Not Available Now');
     }
 
     return (
         <div>
-            <div className="hero min-h-screen">
+            <div className="hero min-h-screen animate__animated animate__fadeInUp">
     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
       <div className="card-body">
             <form onSubmit={handleRegister}>
@@ -78,7 +78,7 @@ const RegisterForm = () => {
             </form>
             <div className="divider">OR</div>
             <button onClick={handleGoogleLogin} className="btn btn-outline w-full">Login with Google</button>
-            <div className="mt-3">Already have Account, then <Link href={'/login'} className="link link-hover font-bold">Login</Link></div>
+            <div className="mt-3 text-[12px]">Already have Account, then <Link href={'/login'} className="link link-hover font-bold">Login</Link></div>
     </div>
   </div>
 </div>
