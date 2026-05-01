@@ -1,4 +1,7 @@
 import HeroSection from "@/pages/home/HeroSection";
+import SummerTips from "@/pages/home/SummerTips";
+import TopBrands from "@/pages/home/TopBrands";
+import PopularProducts from "@/pages/products/PopularProducts";
 
 export const metadata = {
   title: 'Sun Cart | Summer Essentials Store',
@@ -7,9 +10,24 @@ export const metadata = {
 
 const Homepage = () => {
   return (
-    <div>
-      <section>
+    <div className="space-y-5">
+      <section className="mt-5">
         <HeroSection/>
+      </section>
+
+      <section className="space-y-5 mb-5">
+        <h3 className="font-bold text-center text-2xl">Popular Products</h3>
+        <div>
+          <PopularProducts/>
+        </div>
+      </section>
+
+      <section>
+        <SummerTips/>
+      </section>
+
+      <section>
+        <TopBrands/>
       </section>
     </div>
   );

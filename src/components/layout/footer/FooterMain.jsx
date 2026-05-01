@@ -25,7 +25,7 @@ const FooterMain = () => {
                 </div>
             </div>
 
-            <div>
+            <div className="space-y-2">
                 <h4 className="font-bold">Quick Links</h4>
                 <ul className="text-sm">
                     <li>Privacy Policy</li>

@@ -8,3 +8,9 @@
     --color-four: #4E9DB4;
     --color-footer: #1E1E1E;
 }
+
+@layer components {
+    .btn-one {
+        @apply bg-second text-white py-1 px-5 rounded-xl text-sm cursor-pointer hover:bg-first hover:text-black
+    }
+}
