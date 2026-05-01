@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebook, FaInstagram, FaPhone, FaX } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
@@ -35,7 +36,7 @@ const FooterMain = () => {
         </section>
         <hr className="border-gray-700 my-5"/>
         <section>
-            <p className="text-center text-[12px]">Copyright {date.getFullYear()} - <span className="font-bold">SunCart</span>. All Rights Reserved</p>
+            <p className="text-center text-[12px]">Copyright © {date.getFullYear()} - <span className="font-bold"><Link href={'/'}>SunCart</Link></span>. All Rights Reserved</p>
         </section>
         </div>
     );
