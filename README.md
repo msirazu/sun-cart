@@ -18,14 +18,16 @@ Profile Management: Logged-in users can view and update their profile informatio
 
 Dynamic Product Display: Popular products and categories rendered dynamically from JSON data.
 
-Interactive UI: Enhanced user experience with animations using [Animate.css / Lottie / React-Spring].
+Interactive UI: Enhanced user experience with animations using Animate.css
 
 🛠️ Tech Stack
 
 Framework: Next.js (App Router)
 
-Styling: Tailwind CSS, DaisyUI / HeroUI
+Styling: Tailwind CSS, DaisyUI
 
 Authentication: BetterAuth
 
 Deployment: Vercel
+
+Other: React Toastify, React Icons, Swiper

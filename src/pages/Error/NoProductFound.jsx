@@ -4,14 +4,14 @@ const NoProductFound = () => {
     return (
         <div className="flex flex-col justify-center items-center p-5">
             
-            <div className="relative mb-6">
+            <div className="animate__animated animate__bounceIn relative mb-6">
                 <span className="text-8xl opacity-20">🏖️</span>
                 <div className="absolute inset-0 flex items-center justify-center">
                     <span className="text-5xl">🔍</span>
                 </div>
             </div>
 
-            <h2 className="text-2xl font-bold text-gray-800 mb-2">
+            <h2 className="animate__animated animate__fadeInDown text-2xl font-bold text-gray-800 mb-2">
                 No Summer Essentials Found!
             </h2>
             <p className="text-gray-500 mb-8 max-w-sm">

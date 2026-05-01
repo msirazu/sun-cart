@@ -6,9 +6,11 @@ import Link from "next/link";
 import { toast } from "react-toastify";
 import manAvatar from '@/assets/icons/man-avatar.jpg';
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const Account = () => {
     const {data: session, isPending} = authClient.useSession();
+    const router = useRouter();
 
     if (isPending) {
         return <LoadingInfinity/>
@@ -18,7 +20,9 @@ const Account = () => {
 
     const handleSignOut = async() => {
         await authClient.signOut();
-        toast.error('Log Out Success');
+        toast.success('Logged out successfully!');
+        router.push('/login');
+        router.refresh();
     }
     return (
         <>
