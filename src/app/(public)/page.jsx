@@ -15,7 +15,7 @@ const Homepage = () => {
         <HeroSection/>
       </section>
 
-      <section className="space-y-5 mb-5">
+      <section className="space-y-5">
         <h3 className="font-bold text-center text-2xl">Popular Products</h3>
         <div>
           <PopularProducts/>
@@ -26,7 +26,7 @@ const Homepage = () => {
         <SummerTips/>
       </section>
 
-      <section>
+      <section className="mb-5">
         <TopBrands/>
       </section>
     </div>

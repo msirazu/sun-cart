@@ -7,7 +7,7 @@ const PopularProducts = async() => {
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {productsData.slice(0,3).map(product => <ProductCard key={product.id} product={product}/>)}
+            {productsData.slice(0,6).map(product => <ProductCard key={product.id} product={product}/>)}
         </div>
     );
 };
