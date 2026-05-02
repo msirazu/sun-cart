@@ -32,29 +32,39 @@ const LoginForm = () => {
 
         if (error) {
             setErrorMessage(error.message || 'Invalid email or password');
-            toast.error(error.message || 'Login failed')
         }
+    }
+
+    const handleGoogleLogin = async() => {
+        const data = await authClient.signIn.social({
+            provider: 'google',
+        })
     }
 
     return (
         <div>
-            <form onSubmit={handleLogin} className="animate__animated animate__fadeInUp">
-                <div className="hero min-h-screen">
+                <div className="hero min-h-screen animate__animated animate__fadeInUp">
                     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         <div className="card-body">
+            <form onSubmit={handleLogin}>
                             <fieldset className="fieldset">
 <label className="label">Email</label>
 <input type="email" className="input w-full" placeholder="Email" name="email" required/>
+
 <label className="label">Password</label>
 <input type="password" className="input w-full" placeholder="Password" name="password" required/>
+
 {errorMessage && (<p className="text-red-500 text-sm mt-2 font-medium">⚠️ {errorMessage}</p>)}
-<div className="my-3">Don&apos;t have an Account, then <Link href={'/register'} className="link link-hover font-bold">Register</Link></div>
-<button type="submit" className="btn btn-neutral">Login</button>
+
+<button type="submit" className="btn btn-neutral mt-3">Login</button>
                             </fieldset>
+            </form>
+             <div className="divider">OR</div>
+            <button onClick={handleGoogleLogin} className="btn btn-outline w-full">Login with Google</button>
+<div className="my-3 text-[12px]">Don&apos;t have an Account, then <Link href={'/register'} className="link link-hover font-bold">Register</Link></div>
                         </div>
                     </div>
                 </div>
-            </form>
         </div>
     );
 };

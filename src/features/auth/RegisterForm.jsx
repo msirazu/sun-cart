@@ -46,8 +46,10 @@ const RegisterForm = () => {
         }
     }
     
-    const handleGoogleLogin = () => {
-        toast.error('Not Available Now');
+    const handleGoogleLogin = async() => {
+        const data = await authClient.signIn.social({
+            provider: 'google',
+        })
     }
 
     return (

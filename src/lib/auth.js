@@ -7,10 +7,19 @@ const client = new MongoClient(process.env.AUTH_SC_DB_URI);
 const db = client.db('sun-cart-db');
 
 export const auth = betterAuth({
+
     emailAndPassword: { 
     enabled: true,
     autoSignIn: true
   }, 
+
+  socialProviders: {
+    google: {
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    },
+  },
+
   database: mongodbAdapter(db, {
     client
   }),

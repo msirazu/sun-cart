@@ -26,7 +26,7 @@ const Account = () => {
     }
     return (
         <>
-        {user ? <div className="flex items-center gap-2"><span>{user.name}</span>{user.image ? <Image className="rounded-full" width={30} height={30} alt={user.name} src={user.image} unoptimized loading="eager"/> : <Image className="rounded-full" width={30} height={30} alt={'profile pic'} src={manAvatar} unoptimized loading="eager"/>}
+        {user ? <div className="flex items-center gap-2"><span>{user.name}</span>{user.image ? <Image className="rounded-full" width={30} height={30} alt={user.name} src={user.image} unoptimized loading="eager" referrerPolicy="no-referrer"/> : <Image className="rounded-full" width={30} height={30} alt={'profile pic'} src={manAvatar} unoptimized loading="eager"/>}
             <button onClick={handleSignOut} className="btn">Sign Out</button>
             </div> : <div>
             <Link href={'/login'} className="btn">Sign In</Link>
