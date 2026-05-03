@@ -47,7 +47,7 @@ const RegisterForm = () => {
     }
     
     const handleGoogleLogin = async() => {
-        const data = await authClient.signIn.social({
+        await authClient.signIn.social({
             provider: 'google',
         })
     }
