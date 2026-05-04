@@ -79,7 +79,7 @@ const RegisterForm = () => {
         </fieldset>
             </form>
             <div className="divider">OR</div>
-            <button onClick={handleGoogleLogin} className="btn btn-outline w-full">Login with Google</button>
+            <button onClick={handleGoogleLogin} className="btn btn-outline w-full">Continue with Google</button>
             <div className="mt-3 text-[12px]">Already have Account, then <Link href={'/login'} className="link link-hover font-bold">Login</Link></div>
     </div>
   </div>

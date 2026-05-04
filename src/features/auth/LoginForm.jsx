@@ -60,7 +60,7 @@ const LoginForm = () => {
                             </fieldset>
             </form>
              <div className="divider">OR</div>
-            <button onClick={handleGoogleLogin} className="btn btn-outline w-full">Login with Google</button>
+            <button onClick={handleGoogleLogin} className="btn btn-outline w-full">Continue with Google</button>
 <div className="my-3 text-[12px]">Don&apos;t have an Account, then <Link href={'/register'} className="link link-hover font-bold">Register</Link></div>
                         </div>
                     </div>
